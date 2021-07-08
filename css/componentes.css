@@ -3,10 +3,28 @@
 \*------------------*/
 
 .plano {
+    position: relative;
+
     padding: 10px;
     border: 1px solid #95a4a5;
 
     font-size: 1.4rem; /* 14px */
+}
+
+.plano--mais-popular::after {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+
+    padding: 0 10px;
+
+    background-color: #c20303;
+    color: #ffffff;
+
+    font-size: 0.7142em; /* 10px */
+    line-height: 2.5; /* redimensiona a altura da caixinha em x2.5 */
+
+    content: "MAIS POPULAR";
 }
 
 .plano__cabecalho {
@@ -129,6 +147,8 @@
       DEPOIMENTO
 \*------------------*/
 .depoimento {
+    position: relative;
+
     font-size: 2.2rem; /* 22px */
 }
 
@@ -142,11 +162,25 @@
 }
 
 .depoimento > blockquote {
+    position: relative;
+
     margin: 0px;
     padding: 0px 60px;
 
     text-align: center;
     font-size: 1em;
+}
+
+.depoimento > blockquote::before {
+    position: absolute;
+    left: 0;
+    top: -0.35em;
+
+    color: #cccccc;
+
+    font-size: 8em; /* 176px */
+
+    content: "\201C"
 }
 
 .depoimento__autor {
